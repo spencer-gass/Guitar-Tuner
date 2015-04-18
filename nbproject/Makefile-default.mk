@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
 DEBUGGABLE_SUFFIX=elf
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=hex
 DEBUGGABLE_SUFFIX=elf
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 # Object Directory
@@ -75,7 +75,7 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=33EP128GP502
 MP_LINKER_FILE_OPTION=,--script="..\..\lib\lkr\p33EP128GP502_bootldr.gld"
@@ -268,15 +268,15 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    ../../lib/lkr/p33EP128GP502_bootldr.gld
+dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    ../../lib/lkr/p33EP128GP502_bootldr.gld
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG   -omf=elf     -Wl,--local-stack,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,--report-mem$(MP_EXTRA_LD_POST) 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG   -omf=elf     -Wl,--local-stack,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,--report-mem$(MP_EXTRA_LD_POST) 
 	
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   ../../lib/lkr/p33EP128GP502_bootldr.gld
+dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   ../../lib/lkr/p33EP128GP502_bootldr.gld
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -omf=elf -Wl,--local-stack,--defsym=__MPLAB_BUILD=1,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,--report-mem$(MP_EXTRA_LD_POST) 
-	${MP_CC_DIR}\\xc16-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} -a  -omf=elf  
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -omf=elf -Wl,--local-stack,--defsym=__MPLAB_BUILD=1,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,--report-mem$(MP_EXTRA_LD_POST) 
+	${MP_CC_DIR}\\xc16-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} -a  -omf=elf  
 	
 endif
 

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=BonusProject
+PROJECTNAME=ECE-3734-Bonus-Project
 
 # Active Configuration
 DEFAULTCONF=default

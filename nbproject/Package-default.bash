@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=BonusProject.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=bonusproject/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=ECE-3734-Bonus-Project.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=ece-3734-bonus-project/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/bonusproject/bin
+makeDirectory ${TMPDIR}/ece-3734-bonus-project/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/bonusproject.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/ece-3734-bonus-project.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/bonusproject.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/ece-3734-bonus-project.tar *
 checkReturnCode
 
 # Cleanup
